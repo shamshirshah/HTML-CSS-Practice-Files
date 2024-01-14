@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns with a 1:2 ratio */
+  grid-template-rows: auto 1fr; /* Two rows with the first one auto-sized and the second taking the remaining space */
+  min-height: 100vh; /* Minimum height of the grid container to fill the viewport */
+}
+
+.header, .sidebar, .main-content, .footer {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* On smaller screens, switch to a single column layout */
+  }
+}
